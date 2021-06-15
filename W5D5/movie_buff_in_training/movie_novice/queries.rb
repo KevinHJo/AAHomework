@@ -39,7 +39,7 @@ def star_wars
   # hint: use 'select' and 'where'
   Movie
     .select(:id, :title, :yr)
-    .where("title LIKE \'Star Wars%\'")
+    .where("title LIKE (?)", 'Star Wars%')
 end
 
 
